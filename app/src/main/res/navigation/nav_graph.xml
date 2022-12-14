@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeScreenView">
+
+    <fragment
+        android:id="@+id/homeScreenView"
+        android:name="com.example.cookingrecipesapplication.home.HomeScreenView"
+        android:label="HomeScreenView" >
+        <action
+            android:id="@+id/action_homeScreenView_to_recipeDetailScreenView"
+            app:destination="@id/recipeDetailScreenView" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeDetailScreenView"
+        android:name="com.example.cookingrecipesapplication.detail.RecipeDetailScreenView"
+        android:label="RecipeDetailScreenView" >
+        <argument
+            android:name="recipes"
+            app:argType="com.example.cookingrecipesapplication.core.domain.model.Recipes" />
+    </fragment>
+</navigation>
